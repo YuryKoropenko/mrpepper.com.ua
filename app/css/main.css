@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/*Сброс*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, small,
+strike, strong, sub, sup, tt, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer,
+header, hgroup, nav, output, ruby, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button, button:active, button:focus,
+input, input:active, input:focus {
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Переменные*/
+/* Блоки */
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.25;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+/* Шапка сайта */
+.header {
+  box-shadow: 0 7px 12px 0 rgba(0, 0, 0, 0.03), inset 0 -1px 0 0 #f3f3f3;
+}
+
+.header__line {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 111px;
+  border-bottom: 1px solid #f3f3f3;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-left: 15px;
+}
+
+.header__bottom {
+  position: relative;
+  padding-left: 372px;
+  padding-right: 8px;
+}
+
+.header__h-catalog {
+  width: 372px;
+  padding: 16px 30px 16px 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.header__h-catalog::after {
+  content: '';
+  width: 1px;
+  background-color: #f3f3f3;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  position: absolute;
+}
+
+/**/
+/* Шапка сайта */
+.h-logo {
+  display: inline-block;
+  height: 51px;
+  width: auto;
+}
+
+.h-logo__img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.h-info {
+  color: #606060;
+}
+
+.h-phone {
+  padding-right: 48px;
+  position: relative;
+  display: inline-block;
+}
+
+.h-phone__item {
+  display: block;
+}
+
+.h-phone__link {
+  display: inline-block;
+  color: #606060;
+  text-decoration: none;
+}
+
+.h-phone__time {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -18.5px;
+}
+
+.h-phone__time svg {
+  width: 16px;
+  display: block;
+  height: auto;
+  fill: #db3333;
+}
+
+.h-search {
+  width: 684px;
+  background-color: #f3f3f3;
+  height: 56px;
+  padding-right: 84px;
+  position: relative;
+  border-radius: 28px;
+}
+
+.h-search__input {
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding-left: 32px;
+  background-color: transparent;
+  border: none;
+  color: #1c1c1c;
+}
+
+.h-search__btn {
+  width: 84px;
+  font-size: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url(../img/icons/search.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 0 28px 28px 0;
+}
+
+.h-buttons {
+  font-size: 0;
+}
+
+.h-buttons__item {
+  display: inline-block;
+}
+
+.h-buttons__link {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 111px;
+  width: 100%;
+  width: 120px;
+  border-left: 1px solid #f3f3f3;
+  text-decoration: none;
+}
+
+.h-catalog__toggle {
+  width: 372px;
+  border-right: 1px solid #f3f3f3;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: -1px;
+  padding-left: 15px;
+  padding-right: 30px;
+  padding-top: 37px;
+  min-height: 100vh;
+}
+
+.h-catalog__item {
+  margin-bottom: 40px;
+}
+
+.h-catalog__link {
+  text-decoration: none;
+  color: #1c1c1c;
+  line-height: 27px;
+  font-size: 18px;
+  padding-right: 15px;
+  display: block;
+  position: relative;
+}
+
+.h-catalog__link::after {
+  content: '';
+  width: 7.3px;
+  height: 14.6px;
+  background-image: url(../img/icons/catalog-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.h-catalog__button {
+  width: 100%;
+  height: 56px;
+  background-color: #db3333;
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  line-height: 56px;
+  text-align: center;
+}
+
+.h-catalog__button span {
+  display: inline-block;
+  padding-right: 24px;
+  position: relative;
+}
+
+.h-catalog__button span::after {
+  content: '';
+  width: 11px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 27px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-image: url(../img/icons/catalog-trang.svg);
+}
+
+.h-nav__list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 51px;
+}
+
+.h-nav__link {
+  display: block;
+  line-height: 38px;
+  color: #1c1c1c;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.h-nav__lang .ui-selectmenu-button.ui-button {
+  width: auto;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  border-radius: none;
+  padding: 0;
+  margin: 0;
+  width: 46px;
+}
+
+.h-nav__lang .ui-selectmenu-button.ui-button:focus {
+  outline: none;
+}
+
+.h-nav__lang .ui-selectmenu-button.ui-button::after {
+  content: '';
+  width: 10px;
+  height: 6px;
+  background-image: url(../img/icons/catalog-trang-red.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 18px;
+}
+
+.h-nav__lang .ui-selectmenu-text {
+  line-height: 38px;
+  margin-right: 16.3px;
+  color: #a4a4a4;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+}
+
+.h-nav__lang .ui-button .ui-icon {
+  display: none;
+}
+
+/**/

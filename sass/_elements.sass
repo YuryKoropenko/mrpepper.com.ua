@@ -1,0 +1,219 @@
+@import "bourbon/bourbon"
+@import "sass/_blocks"
+
+/* Шапка сайта */
+
+.h-logo
+	display: inline-block
+	height: 51px
+	width: auto
+	&__img
+		display: block
+		height: 100%
+		width: auto
+
+.h-info
+	color: $gray
+
+.h-phone
+	padding-right: 48px
+	position: relative
+	display: inline-block
+	&__list
+	&__item
+		display: block
+	&__link
+		display: inline-block
+		color: $gray
+		text-decoration: none
+	&__time
+		width: 37px
+		height: 37px
+		border-radius: 50%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #f3f3f3
+		position: absolute
+		right: 0
+		top: 50%
+		margin-top: -18.5px
+		svg
+			width: 16px
+			display: block
+			height: auto
+			fill: $red
+
+.h-search
+	width: 684px
+	background-color: #f3f3f3
+	height: 56px
+	padding-right: 32 + 20 + 32 + px
+	position: relative
+	border-radius: 28px
+	&__input
+		height: 100%
+		width: 100%
+		display: block
+		padding-left: 32px
+		background-color: transparent
+		border: none
+		color: $black
+	&__btn
+		width: 32 + 20 + 32 + px
+		font-size: 0
+		position: absolute
+		bottom: 0
+		right: 0
+		top: 0
+		border: none
+		background-color: transparent
+		background-image: url(../img/icons/search.svg)
+		background-repeat: no-repeat
+		background-position: center center
+		cursor: pointer
+		z-index: 1
+		border-radius: 0 28px 28px 0
+
+.h-buttons
+	font-size: 0
+	&__item
+		display: inline-block
+	&__link
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 111px
+		width: 100%
+		width: 120px
+		border-left: 1px solid #f3f3f3
+		text-decoration: none
+		&-profile
+		&-basket
+
+.h-catalog
+	&__toggle
+		width: 372px
+		border-right: 1px solid #f3f3f3
+		background-color: #fff
+		position: absolute
+		left: 0
+		top: 100%
+		margin-top: -1px
+		padding-left: 15px
+		padding-right: 30px
+		padding-top: 53 - 16 + px
+		min-height: 100vh
+	&__list
+	&__item
+		margin-bottom: 40px
+	&__link
+		text-decoration: none
+		color: $black
+		line-height: 27px
+		font-size: 18px
+		padding-right: 15px
+		display: block
+		position: relative
+		&::after
+			content: ''
+			width: 7.3px
+			height: 14.6px
+			background-image: url(../img/icons/catalog-arrow.svg)
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center center
+			display: block
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)
+	&__button
+		width: 100%
+		height: 56px
+		background-color: $red
+		display: block
+		font-size: 18px
+		color: #fff
+		line-height: 56px
+		text-align: center
+		span
+			display: inline-block
+			padding-right: 24px
+			position: relative
+			&::after
+				content: ''
+				width: 11px
+				height: 6px
+				display: block
+				position: absolute
+				right: 0
+				top: 27px
+				background-repeat: no-repeat
+				background-size: contain
+				background-position: center center
+				background-image: url(../img/icons/catalog-trang.svg)
+
+.h-nav
+	&__list
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		padding-bottom: 25px
+		padding-top: 25px
+		padding-left: 51px
+	&__item
+	&__link
+		display: block
+		line-height: 38px
+		color: $black
+		font-size: 18px
+		text-decoration: none
+	&__lang
+		.ui-selectmenu-button.ui-button
+			width: auto
+			border: none
+			background-color: transparent
+			padding: 0
+			border-radius: none
+			padding: 0
+			margin: 0
+			width: 46px
+			&:focus
+				outline: none
+			&::after
+				content: ''
+				width: 10px
+				height: 6px
+				background-image: url(../img/icons/catalog-trang-red.svg)
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				display: block
+				position: absolute
+				right: 0
+				top: 18px
+		.ui-selectmenu-text
+			line-height: 38px
+			margin-right: 10.4 + 5.9 + px
+			color: $graylight
+			font-size: 18px
+			font-family: "Lato", sans-serif
+			font-weight: normal
+		.ui-button .ui-icon
+			display: none
+
+
+/**/
