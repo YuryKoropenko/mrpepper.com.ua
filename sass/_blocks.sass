@@ -20,10 +20,13 @@ body
 	font-weight: normal
 	font-style: normal
 	overflow-x: hidden
+	background-color: #fff
 
 /* Шапка сайта */
 .header
 	box-shadow: 0 7px 12px 0 rgba(0, 0, 0, 0.03), inset 0 -1px 0 0 #f3f3f3;
+	z-index: 3
+	position: relative
 	&__line
 		display: -webkit-flex
 		display: -moz-flex
@@ -63,6 +66,93 @@ body
 			z-index: 1
 			display: block
 			position: absolute
+	&__h-catalog.active
+		&::after
+			display: none
 
+/* page */
+.body-white-line
+	width: 372px
+	left: 0
+	height: auto
+	position: absolute
+	top: 199px
+	bottom: 0
+	z-index: 2
+	background-color: #fff
+	border-right: 1px solid #f3f3f3
+.standart-section
+	background-color: transparent
+	position: relative
+	&__img
+		position: absolute
+		left: 0
+		bottom: 0
+		z-index: 1
+.white-section
+	background-color: #fff
+	position: relative
+	.page__p-sectionwrapper
+		margin-top: 64px
+	&__img
+		position: absolute
+		right: -180px
+		top: -137px
+
+.page
+	margin-left: 372px
+	background-color: #f7f7f7
+	&-index
+	&__p-indexbanner
+		margin-bottom: -30px
+	&__p-questions
+	&__p-redbaner
+		margin-top: -143px
+	&__p-sectionwrapper
+		position: relative
+		margin-top: 80px
+		margin-bottom: 30px
+		padding-right: 350px
+	&__p-sectiontitle
+	&__p-sectionslider
+		position: absolute
+		right: 0
+		top: 20px
+	&__p-carousel
+		margin-bottom: 77px
+	&__p-neededhelp
+	&__p-sectioninfo
+		position: absolute
+		right: 0
+		top: 13px
+	&__p-recipes
+		padding-bottom: 86px
+
+/* Подвал сайта */
+.footer
+	margin-left: 372px
+	background-color: #f7f7f7
+	&__top
+		background-image: url(../img/footer-bg.png)
+		background-size: auto 100%
+		height: 225px
+		background-position: right top
+		padding-bottom: 28px
+		.container
+			height: 100%
+		.row
+			height: 100%
+	&__center
+		padding-top: 40px
+		padding-bottom: 50px
+		background-color: #fff
+	&__bottom
+		background-color: #f3f3f3
+		padding: 14px 0
+	&__f-col
+		width: 25%
+		float: left
+	&__f-nav
+	&__f-copy
 
 /**/
