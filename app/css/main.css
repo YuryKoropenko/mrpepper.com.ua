@@ -141,6 +141,7 @@ body {
 .page {
   margin-left: 372px;
   background-color: #f7f7f7;
+  overflow-x: hidden;
 }
 
 .page__p-indexbanner {
@@ -186,7 +187,7 @@ body {
 
 .footer__top {
   background-image: url(../img/footer-bg.png);
-  background-size: auto 100%;
+  background-size: cover;
   height: 225px;
   background-position: right top;
   padding-bottom: 28px;
@@ -770,6 +771,7 @@ body {
   color: #a4a4a4;
   font-size: 14px;
   line-height: 21px;
+  display: block;
   margin-bottom: 7px;
   font-weight: 500;
 }

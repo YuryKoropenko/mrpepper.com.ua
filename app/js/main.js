@@ -8,8 +8,6 @@ $(function() {
 		loop:true,
 		margin:30,
 		nav:false,
-		items:4,
-		dots:false,
 		responsive:{
 			0:{
 				items:1
@@ -21,7 +19,12 @@ $(function() {
 				items:3
 			},
 			992:{
-				items:4
+				items:3,
+				dots:true
+			},
+			993:{
+				items:4,
+				dots:false
 			}
 		}
 	});
@@ -37,8 +40,6 @@ $(function() {
 		loop:true,
 		margin:30,
 		nav:false,
-		items:4,
-		dots:false,
 		responsive:{
 			0:{
 				items:1
@@ -50,7 +51,12 @@ $(function() {
 				items:3
 			},
 			992:{
-				items:4
+				items:3,
+				dots:true
+			},
+			993:{
+				items:4,
+				dots:false
 			}
 		}
 	});
@@ -66,8 +72,6 @@ $(function() {
 		loop:true,
 		margin:30,
 		nav:false,
-		items:4,
-		dots:false,
 		responsive:{
 			0:{
 				items:1
@@ -79,7 +83,12 @@ $(function() {
 				items:2
 			},
 			992:{
-				items:3
+				items:3,
+				dots:true
+			},
+			993:{
+				items:4,
+				dots:false
 			}
 		}
 	});
@@ -92,40 +101,98 @@ $(function() {
 		return false;
 	});
 
-	$('.h-catalog__button').on('click', function() {
-		if($(this).parent().parent().hasClass('active')) {
-			var bodyleftline = $('.body-white-line').width();
-			
-			$('.body-white-line').animate({
-				'left': '0'
-			}, 1000);
-			$('.h-catalog__toggle').animate({
-				'left': '0'
-			}, 1000);
-			$('.page').animate({
-				'margin-left': '-' + bodyleftline + 'px'
-			}, 1000);
-			$('.footer').animate({
-				'margin-left': '-' + bodyleftline + 'px'
-			}, 1000);
-			$('.header__h-catalog').removeClass('active');
-			return false;
-		} else {
-			var bodyleftline = $('.body-white-line').width();
-			$('.body-white-line').animate({
-				'left': '-' + bodyleftline + 'px'
-			}, 1000);
-			$('.h-catalog__toggle').animate({
-				'left': '-' + bodyleftline + 'px'
-			}, 1000);
-			$('.page').animate({
-				'margin-left': '0'
-			}, 1000);
-			$('.footer').animate({
-				'margin-left': '0'
-			}, 1000);
-			$('.header__h-catalog').addClass('active');
-			return false;
+	$('.p-carousel3').owlCarousel({
+		loop:true,
+		margin:30,
+		nav:false,
+		responsive:{
+			0:{
+				items:1
+			},
+			567:{
+				items:1
+			},
+			768:{
+				items:2
+			},
+			992:{
+				items:3,
+				dots:true
+			},
+			993:{
+				items:4,
+				dots:false
+			}
 		}
 	});
+
+/* Скрипт для каталог меню */
+	if ($(window).width() > 1399) {
+		$('.h-catalog__button').on('click', function() {
+			if($(this).parent().parent().hasClass('active')) {
+				var bodyleftline = $('.body-white-line').width();
+				
+				$('.body-white-line').animate({
+					'left': '0'
+				}, 1000);
+				$('.h-catalog__toggle').animate({
+					'left': '0'
+				}, 1000);
+				$('.page').animate({
+					'margin-left': bodyleftline + 'px'
+				}, 1000);
+				$('.footer').animate({
+					'margin-left': bodyleftline + 'px'
+				}, 1000);
+				$('.header__h-catalog').removeClass('active');
+				return false;
+			} else {
+				var bodyleftline = $('.body-white-line').width();
+				$('.body-white-line').animate({
+					'left': '-' + bodyleftline + 'px'
+				}, 1000);
+				$('.h-catalog__toggle').animate({
+					'left': '-' + bodyleftline + 'px'
+				}, 1000);
+				$('.page').animate({
+					'margin-left': '0'
+				}, 1000);
+				$('.footer').animate({
+					'margin-left': '0'
+				}, 1000);
+				$('.header__h-catalog').addClass('active');
+				return false;
+			}
+		});
+	}
+	if ($(window).width() < 1400) {
+		$('.header__h-catalog').addClass('active');
+
+		$('.h-catalog__button').on('click', function() {
+			if($(this).parent().parent().hasClass('active')) {
+				var bodyleftline = $('.body-white-line').width();
+				$('.body-white-line').animate({
+					'left': '0'
+				}, 1000);
+				$('.h-catalog__toggle').animate({
+					'left': '0'
+				}, 1000);
+				$('.header__h-catalog').removeClass('active');
+				return false;
+			} else {
+				var bodyleftline = $('.body-white-line').width();
+				$('.body-white-line').animate({
+					'left': '-' + bodyleftline + 'px'
+				}, 1000);
+				$('.h-catalog__toggle').animate({
+					'left': '-' + bodyleftline + 'px'
+				}, 1000);
+				$('.header__h-catalog').addClass('active');
+				return false;
+			}
+		});
+	}
+
+	/* Скрипт замены логотипа */
+	$('.h-logo__img').attr('src', 'img/mob-logo.svg');
 });
